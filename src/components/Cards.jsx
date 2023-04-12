@@ -1,33 +1,38 @@
 import React, { useEffect } from 'react'
 import { getProducts } from '../services/Products'
+import { Link } from 'react-router-dom'
 
 export const Cards = () => {
+
     const [product, setProduct] = React.useState([])
     useEffect(() => {
         getProducts().then((data) => {
             setProduct(data)
+            console.log(data);
         })
             .catch((error) => {
                 console.log(error)
             })
     }, [])
+
     return (
-        <div>{product.map(
+        <div className='flex flex-row justify-center gap-2 mt-2 mb-2 w-full flex-wrap'>{product.slice(0, 40).map(
             (product) => {
                 return (
-                    <div key={product.id} className="card card-compact w-96 bg-base-100 shadow-xl">
-                        <figure><img src={product.images} alt={product.title} /></figure>
-                        <div className="card-body">
-                            <h2 className="card-title">{product.title}</h2>
-                            <p>{product.description}</p>
-                            <p>{product.price}</p>
-                            <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Buy Now</button>
+                    <Link key={product.id} to={`/product/${product.id}`}>
+                        <div className="card bg-base-100 shadow-xl h-40 w-28 mb-3 hover:cursor-pointer">
+                            <div className='h-110'>
+                                <img src={product.images} alt={product.title} height='110' width='112' className='object-fit rounded-t-lg' />
+                            </div>
+                            <div className="flex flex-col items-center">
+                                <h2 className="text-xs">{product.title}</h2>
+                                <p className='text-xs'>$ {product.price}</p>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 )
             }
-        )}</div>
+        )}
+        </div>
     )
 }
