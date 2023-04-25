@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Profile } from './routes/Profile'
-import { CreateAccount } from './routes/CreateAccount'
-import { LogIn } from './routes/LogIn'
+import { Profile } from './pages/Profile'
+import { CreateAccount } from './pages/CreateAccount'
+import { LogIn } from './pages/LogIn'
+import { Details } from './pages/Details'
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/product/:id',
-    element: 'Detalle de producto'
+    element: <Details />
   }
 ])
 

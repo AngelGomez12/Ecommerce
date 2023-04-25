@@ -19,7 +19,7 @@ export const Cards = () => {
         <div className='flex flex-row justify-center gap-2 mt-2 mb-2 w-full flex-wrap'>{product.slice(0, 40).map(
             (product) => {
                 return (
-                    <Link key={product.id} to={`/product/${product.id}`}>
+                    <Link key={product.id} to={`/product/${product.id}`} className='h-40 w-28'>
                         <div className="card bg-base-100 shadow-xl h-40 w-28 mb-3 hover:cursor-pointer">
                             <div className='h-110'>
                                 <img src={product.images} alt={product.title} height='110' width='112' className='object-fit rounded-t-lg' />

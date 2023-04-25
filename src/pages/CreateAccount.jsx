@@ -27,15 +27,15 @@ export const CreateAccount = () => {
 
     return (
         <div className='flex justify-center items-center h-screen'>
-            <section className="bg-white w-5/6 h-96 rounded-lg">
+            <section className="bg-white w-5/6 h-5/6 rounded-lg">
                 <div className="flex h-full">
                     <section
-                        className="relative flex h-32 items-end bg-gray-900 rounded-l-lg"
+                        className="relative flex h-full items-end bg-gray-900 rounded-l-lg"
                     >
                         <img
                             alt="Night"
                             src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                            className="absolute inset-0 h-96 w-full object-cover rounded-l-lg"
+                            className="absolute inset-0 h-full w-full object-cover rounded-l-lg"
                         />
 
                         <div className="hidden lg:relative lg:block lg:p-12 h-full">
@@ -64,16 +64,11 @@ export const CreateAccount = () => {
                         </div>
                     </section>
 
-                    <main
-                        aria-label="Main"
-                        className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16"
-                    >
-                        <div className="max-w-xl lg:max-w-3xl">
+                    <main aria-label="Main"
+                        className="flex items-center justify-center w-1/2 sm:px-12 lg:col-span-7 lg:py-12 lg:px-16">
+                        <div className="max-w-xl lg:max-w-3xl flex w-full h-ful">
                             <div className="relative -mt-16 block lg:hidden">
-                                <a
-                                    className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20"
-                                    href="/"
-                                >
+                                <a className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-blue-600 sm:h-20 sm:w-20" href="/">
                                     <span className="sr-only">Home</span>
                                     <svg
                                         className="h-8 sm:h-10"

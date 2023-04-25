@@ -5,7 +5,7 @@ export const Header = () => {
     return (
         <div className="bg-base-100 flex w-full items-center min-h-12">
             <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-xl">Ecommerce</a>
+                <Link to='/home' className="btn btn-ghost normal-case text-xl">E-commerce</Link>
             </div>
             <div className="flex mr-5">
                 <div className="dropdown dropdown-end">

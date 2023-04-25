@@ -5,7 +5,7 @@ import { Cards } from './components/Cards'
 function App() {
 
   return (
-    <div className="App bg-slate-200 h-full">
+    <div className="App bg-slate-200 h-screen">
       <Header />
       <Cards />
     </div>
